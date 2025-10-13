@@ -4,11 +4,10 @@ RewriteEngine On
 # Establecer la carpeta base
 RewriteBase /CrudLibros/
 
-# Redirigir todas las solicitudes a la carpeta public
-RewriteCond %{REQUEST_URI} !^/CrudLibros/public/
-RewriteRule ^(.*)$ public/$1 [L]
+# Si se accede a la raíz, redirigir a public/
+DirectoryIndex public/index.php
 
-# Si el archivo o directorio no existe, redirigir a index.php
+# Redirigir todo a la carpeta public si no es un archivo o directorio
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ public/index.php [L]
+RewriteRule ^(.*)$ public/$1 [L]
