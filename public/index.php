@@ -15,7 +15,7 @@ $libros = $stmt->fetchAll();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dee3f8ff 0%, #efe5faff 100%);
             min-height: 100vh;
             padding: 20px 0;
         }
