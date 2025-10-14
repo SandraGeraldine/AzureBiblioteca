@@ -27,7 +27,7 @@ $libros = $stmt->fetchAll();
             margin-top: 20px;
         }
         .header-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #667eea  100%);
             color: white;
             padding: 30px;
             border-radius: 10px;
@@ -35,12 +35,12 @@ $libros = $stmt->fetchAll();
             text-align: center;
         }
         .btn-custom {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #667eea  100%);
             border: none;
             color: white;
         }
         .btn-custom:hover {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            background: linear-gradient(135deg, #667eea  0%, #667eea 100%);
             color: white;
         }
         .table-hover tbody tr:hover {
