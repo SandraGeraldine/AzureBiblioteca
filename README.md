@@ -1,6 +1,6 @@
 # AzureBiblioteca
 
-Sistema CRUD de Libros para Biblioteca SENATI
+Sistema CRUD de Libros para Biblioteca 
 
 ## Descripción
 Aplicación web desarrollada en PHP y MySQL para la gestión de libros. Permite crear, leer, actualizar y eliminar registros de libros. Compatible con despliegue local (XAMPP) y Azure App Service.
