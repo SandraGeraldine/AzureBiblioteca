@@ -1,9 +1,6 @@
 # Habilitar el motor de reescritura
 RewriteEngine On
 
-# Establecer la carpeta base
-RewriteBase /CrudLibros/
-
 # Si se accede a la raíz, redirigir a public/
 DirectoryIndex public/index.php
 
