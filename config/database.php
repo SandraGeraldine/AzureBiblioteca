@@ -7,7 +7,7 @@ if ($isAzure) {
     // Configuración para Azure App Service
     // Estas variables se configuran en: Configuración > Variables de entorno
     $host = getenv('AZURE_MYSQL_HOST') ?: 'localhost';
-    $dbname = getenv('AZURE_MYSQL_DBNAME') ?: 'biblioteca_senati';
+    $dbname = getenv('AZURE_MYSQL_DBNAME') ?: 'biblioteca-senati';
     $username = getenv('AZURE_MYSQL_USERNAME') ?: 'root';
     $password = getenv('AZURE_MYSQL_PASSWORD') ?: '';
     

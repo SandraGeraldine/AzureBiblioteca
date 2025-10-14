@@ -1,8 +1,8 @@
 -- Base de datos para CRUD de Libros
 -- Proyecto SENATI - Azure
 
-CREATE DATABASE IF NOT EXISTS biblioteca_senati;
-USE biblioteca_senati;
+CREATE DATABASE IF NOT EXISTS `biblioteca-senati`;
+USE `biblioteca-senati`;
 
 -- Tabla de libros
 CREATE TABLE IF NOT EXISTS libros (
