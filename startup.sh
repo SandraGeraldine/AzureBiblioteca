@@ -1,9 +1,9 @@
 #!/bin/bash
 # Startup script for Azure App Service
-echo "🚀 Iniciando aplicación PHP..."
+echo "Iniciando aplicación PHP..."
 
 # Configurar nginx para servir desde /public
-echo "📁 Configurando Document Root a /public..."
+echo " Configurando Document Root a /public..."
 
 # Crear configuración de nginx
 cat > /etc/nginx/sites-available/default <<'EOF'
@@ -34,5 +34,5 @@ EOF
 
 # Recargar nginx
 nginx -s reload
-echo "✅ Nginx configurado correctamente"
-echo "📂 Document Root: /home/site/wwwroot/public"
+echo "Nginx configurado correctamente"
+echo "Document Root: /home/site/wwwroot/public"

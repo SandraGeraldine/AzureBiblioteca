@@ -24,7 +24,7 @@ if ($isAzure) {
     $port = 3306;
 }
 
-echo "<h1>🔧 Configuración de Base de Datos</h1>";
+echo "<h1>Configuración de Base de Datos</h1>";
 echo "<p><strong>Entorno:</strong> " . ($isAzure ? "Azure App Service" : "Local") . "</p>";
 echo "<p><strong>Base de datos:</strong> $dbname</p>";
 echo "<hr>";
@@ -45,11 +45,11 @@ try {
     }
     
     $pdo = new PDO($dsn, $username, $password, $options);
-    echo "<p>✅ Conexión al servidor MySQL exitosa</p>";
+    echo "<p>Conexión al servidor MySQL exitosa</p>";
     
     // Crear base de datos si no existe
     $pdo->exec("CREATE DATABASE IF NOT EXISTS `$dbname` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "<p>✅ Base de datos '$dbname' verificada/creada</p>";
+    echo "<p>Base de datos '$dbname' verificada/creada</p>";
     
     // Seleccionar la base de datos
     $pdo->exec("USE `$dbname`");
@@ -67,7 +67,7 @@ try {
     ";
     
     $pdo->exec($createTableSQL);
-    echo "<p>✅ Tabla 'libros' creada exitosamente</p>";
+    echo "<p>Tabla 'libros' creada exitosamente</p>";
     
     // Verificar si ya hay datos
     $stmt = $pdo->query("SELECT COUNT(*) as total FROM libros");
@@ -86,13 +86,13 @@ try {
         ";
         
         $pdo->exec($insertSQL);
-        echo "<p>✅ 5 libros de ejemplo insertados</p>";
+        echo "<p>5 libros de ejemplo insertados</p>";
     } else {
-        echo "<p>ℹ️ La tabla ya contiene $totalLibros libro(s)</p>";
+        echo "<p>ℹLa tabla ya contiene $totalLibros libro(s)</p>";
     }
     
     // Mostrar los libros actuales
-    echo "<h2>📚 Libros en la base de datos:</h2>";
+    echo "<h2>Libros en la base de datos:</h2>";
     $stmt = $pdo->query("SELECT * FROM libros ORDER BY id");
     $libros = $stmt->fetchAll();
     
@@ -117,12 +117,12 @@ try {
     }
     
     echo "<hr>";
-    echo "<h2>✅ Configuración completada exitosamente</h2>";
+    echo "<h2>Configuración completada exitosamente</h2>";
     echo "<p><a href='index.php' style='background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>Ir a la aplicación</a></p>";
-    echo "<p style='color: #ff9800;'><strong>⚠️ IMPORTANTE:</strong> Por seguridad, elimina este archivo después de ejecutarlo o restringe su acceso.</p>";
+    echo "<p style='color: #ff9800;'><strong>IMPORTANTE:</strong> Por seguridad, elimina este archivo después de ejecutarlo o restringe su acceso.</p>";
     
 } catch(PDOException $e) {
-    echo "<p style='color: red;'>❌ Error: " . $e->getMessage() . "</p>";
+    echo "<p style='color: red;'> Error: " . $e->getMessage() . "</p>";
     echo "<h3>Información de depuración:</h3>";
     echo "<pre>";
     echo "Host: $host\n";
